@@ -24,7 +24,7 @@ class MainViewModel @Inject constructor(
         getRandomExercise()
     }
 
-    private fun getRandomExercise() {
+    fun getRandomExercise() {
         viewModelScope.launch {
             try {
                 _state.value = state.value.copy(isLoading = true)
